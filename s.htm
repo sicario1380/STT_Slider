@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button></button>
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+    ></script>
+    <script>
+      function extractNumber(phrase) {
+        let match = phrase.match(/(\d+)(?=\D*$)/);
+        if (match) {
+          return match[0];
+        } else {
+          return null;
+        }
+      }
+
+      console.log(extractNumber("001_140")); // 140
+      console.log(extractNumber("chunk140")); // 140
+    </script>
+  </body>
+</html>

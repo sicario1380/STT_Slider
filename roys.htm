@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <!--============== CSS =============-->
+    <link rel="stylesheet" href="/Style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!--============== Bootstrap link =============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+
+  <body style="background-color: black">
+    <!-- _______________________________________________ Offers Prodcut Slider _____________________________________________________ -->
+
+    <div class="container my-2 py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 col-md-8">
+          <div class="text-center">
+            <h1 class="text-warning" style="font-size: 45px">STT Asset</h1>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <div class="searchbar container-fluid">
+        <div class="d-flex justify-content-start">
+          <div style="display: inline">
+            <label for="searchinput" style="color: aliceblue; font-weight: 700"
+              >Go for the chunk number</label
+            >
+
+            <input type="number" min="1" id="searchinput" name="searchinput" />
+            <input type="button" value="Go" />
+          </div>
+        </div>
+      </div>
+
+      <div class="slider">
+        <div id="template-slide" class="mx-3">
+          <div class="card border-0 rounded-0">
+            <div
+              class="d-flex bg-opacity-25 justify-content-center"
+              style="height: 260px"
+            >
+              <div class="text-center pb-2 bg-dark w-100 pt-3 bg-opacity-75">
+                <textarea
+                  name="textgen"
+                  id="textgen"
+                  cols="120"
+                  rows="3"
+                  style="
+                    resize: none;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    direction: rtl;
+                    padding: 1%;
+                  "
+                  placeholder="Your TXT"
+                ></textarea>
+                <div
+                  class="interact2 d-flex justify-content-evenly align-items-center"
+                  style="margin-top: 2rem"
+                >
+                  <div class="playbtn" style="position: relative">
+                    <span
+                      style="
+                        color: aliceblue;
+                        margin-right: 1rem;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial,
+                          Helvetica, 'Franklin Gothic Medium', 'Arial Narrow',
+                          Arial, Arial, Helvetica, sans-serif;
+                        font-weight: 700;
+                      "
+                      >Voice ID :</span
+                    ><span
+                      style="
+                        color: aliceblue;
+                        margin-right: 1rem;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial,
+                          Helvetica, 'Franklin Gothic Medium', 'Arial Narrow',
+                          Arial, Arial, Helvetica, sans-serif;
+                        font-weight: 700;
+                      "
+                      id="voiceid"
+                    ></span>
+                    <span id="number" hidden></span>
+                    <button style="background: orange; position: relative">
+                      <i class="fas fa-play"></i>
+                    </button>
+                  </div>
+
+                  <div class="valid">
+                    <label
+                      for="validated"
+                      style="color: rgb(233, 190, 73); font-weight: 800"
+                    >
+                      Validated?
+                    </label>
+                    <input
+                      name="validated"
+                      id="validated"
+                      style="
+                        position: relative;
+                        width: 15px;
+                        height: 15px;
+                        margin-top: 0.5rem;
+                        margin-left: 1rem;
+                      "
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+
+                <div class="interact" style="margin: 1rem">
+                  <input
+                    style="
+                      position: relative;
+                      width: 4rem;
+                      height: 3rem;
+                      color: aliceblue;
+                    "
+                    type="button"
+                    value="EDIT"
+                    class="btn btn-info"
+                  />
+                  <input
+                    class="btn btn-danger"
+                    style="
+                      position: relative;
+                      width: 4rem;
+                      height: 3rem;
+                      margin-left: 1rem;
+                    "
+                    type="button"
+                    value="DEL"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <div style="display: inline">
+          <!-- Create an input element of type file -->
+          <label
+            style="
+              color: aliceblue;
+              margin-right: 1rem;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, Helvetica,
+                'Franklin Gothic Medium', 'Arial Narrow', Arial, Arial,
+                Helvetica, sans-serif;
+              font-weight: 700;
+            "
+            for="fileInput"
+            >Your .csv =></label
+          >
+          <input
+            style="
+              color: aliceblue !important;
+              background-color: #333;
+              border: none;
+              padding: 6px 12px;
+              border-radius: 4px;
+            "
+            name="fileInput"
+            type="file"
+            id="fileInput"
+            accept=".csv"
+          />
+
+          <label
+            style="
+              color: aliceblue;
+              margin-right: 1rem;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, Helvetica,
+                'Franklin Gothic Medium', 'Arial Narrow', Arial, Arial,
+                Helvetica, sans-serif;
+              font-weight: 700;
+            "
+            for="soundinput"
+            >Your .wavs =></label
+          >
+          <input
+            style="
+              color: aliceblue !important;
+              background-color: #333;
+              border: none;
+              padding: 6px 12px;
+              border-radius: 4px;
+            "
+            name="soundinput"
+            type="file"
+            id="soundinput"
+            accept=".wav"
+            multiple
+          />
+        </div>
+
+        <div class="download">
+          <button
+            id="downloadButton"
+            style="
+              background-color: #4caf50; /* Green */
+              border: none;
+              color: white;
+              padding: 8px 16px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+              border-radius: 4px;
+            "
+          >
+            <i class="fa fa-download"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="border-top footer text-muted"
+      style="position: absolute; bottom: 1rem"
+    >
+      <div
+        class="container"
+        style="color: aliceblue; font-family: sans-serif; font-weight: 700"
+      >
+        Rights Reserved For this gmail : erfa.witcher@gmail.com, we will enjoy
+        your recoms and crits
+      </div>
+    </footer>
+
+    <!-- ___________ Slick Slider ______________ -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        // Get a reference to the file input element
+        let fileInput = document.getElementById("fileInput");
+        let data = [];
+
+        // Get a reference to the template slide element
+        let templateSlide = document.getElementById("template-slide");
+
+        // Set the batch size
+        let batchSize = 100;
+
+        // Create a variable to keep track of the current batch
+        let currentBatch = 0;
+
+        // Create a function to process the next batch of rows
+        function processNextBatch() {
+          // Calculate the start and end index of the current batch
+          let startIndex = currentBatch * batchSize;
+          let endIndex = startIndex + batchSize;
+
+          // Get the rows in the current batch
+          let batchRows = data.slice(startIndex, endIndex);
+
+          // Loop over the rows in the current batch
+          for (let row of batchRows) {
+            // Clone the template slide element
+            let slide = templateSlide.cloneNode(true);
+            slide.removeAttribute("id");
+            slide.classList.remove("d-none");
+
+            // Set the text content of the textarea element
+            let textarea = slide.querySelector("textarea");
+            textarea.textContent = row[1];
+
+            // Set the text content of the voice ID element
+            let voiceId = slide.querySelector("#voiceid");
+            voiceId.textContent = row[0];
+
+            // Check the checkbox if the row is validated
+            if (row[row.length - 1] === "true") {
+              slide.querySelector("input[type='checkbox']").checked = true;
+            }
+
+            console.log("Row:", row);
+
+            // Append the slide to the slider
+            jQuery(".slider").slick("slickAdd", slide);
+          }
+
+          // Increment the current batch
+          currentBatch++;
+
+          // Check if there are more rows to process
+          if (startIndex < data.length) {
+            // Schedule the next batch to be processed after a short delay
+            //setTimeout(processNextBatch, 100);
+            requestAnimationFrame(processNextBatch);
+          }
+        }
+
+        // Add an event listener to handle file selection
+        fileInput.addEventListener("change", function () {
+          // Get the selected file
+          let file = fileInput.files[0];
+
+          // Create a FileReader to read the contents of the file
+          let reader = new FileReader();
+          reader.onload = function () {
+            // Split the file contents into rows
+            let rows = reader.result.split("\n");
+
+            // Loop over the rows and split each row into values using a pipe character as the delimiter
+            for (let row of rows) {
+              let values = row.split("|");
+              data.push(values);
+            }
+
+            // Sort the rows in ascending order based on the number at the beginning of each row
+            rows.sort((a, b) => {
+              let aNumber = a.split("|")[0];
+              let bNumber = b.split("|")[0];
+              return aNumber.localeCompare(bNumber, undefined, {
+                numeric: true,
+              });
+            });
+
+            // Start processing the first batch of rows
+            processNextBatch(rows);
+          };
+
+          // Read the contents of the file as text
+          reader.readAsText(file);
+        });
+
+        // Get a reference to the search input element
+        let searchInput = document.getElementById("searchinput");
+
+        // Get a reference to the Go button
+        let goButton = document.querySelector(
+          "input[type='button'][value='Go']"
+        );
+
+        // Add an event listener to handle button clicks
+        goButton.addEventListener("click", function () {
+          // Get the value of the search input element
+          let searchValue = searchInput.value.toString();
+
+          // Find the index of the slide with the matching voice ID
+          let slideIndex = -1;
+          let slides = document.querySelectorAll(
+            ".slider .slick-slide:not(.slick-cloned)"
+          );
+
+          for (let i = 0; i < slides.length; i++) {
+            let slide = slides[i];
+            let voiceId = slide.querySelector("#voiceid").textContent;
+
+            // Get the div element with class playbtn
+            let playbtn = slide.querySelector(".playbtn");
+
+            // Get the second child of the playbtn div, which is a span element
+            let span = playbtn.children[1];
+
+            // Get the text value of the span element
+            let text = span.textContent;
+
+            // Log the text value to the console
+
+            voiceId = text;
+            let numericVoiceId = voiceId.split("_")[1];
+            console.log("voiceid", voiceId);
+            console.log("searchValue", searchValue);
+            if (numericVoiceId === searchValue) {
+              // Get the correct index of the slide among all slides in the slider
+              slideIndex = parseInt(slide.getAttribute("data-slick-index"));
+              console.log("slideIndex", slideIndex);
+              break;
+            }
+          }
+
+          // Check if a matching slide was found
+          if (slideIndex !== -1) {
+            // Navigate to the slide with the matching voice ID
+            jQuery(".slider").slick("slickGoTo", slideIndex);
+          }
+        });
+
+        // Get a reference to the sound input element
+        let soundInput = document.getElementById("soundinput");
+
+        // Create an object to store the audio files
+        let audioFiles = {};
+
+        // Add an event listener to handle file selection
+        soundInput.addEventListener("change", function () {
+          // Get the selected files
+          let files = soundInput.files;
+
+          // Loop over the selected files
+          for (let i = 0; i < files.length; i++) {
+            // Get the current file
+            let file = files[i];
+
+            // Create an audio element for the current file
+            let audio = new Audio(URL.createObjectURL(file));
+
+            // Store the audio element in the audioFiles object using the file name as the key
+            audioFiles[file.name] = audio;
+          }
+        });
+
+        // Add an event listener for the afterChange event of the Slick carousel
+        jQuery(".slider").on(
+          "afterChange",
+          function (event, slick, currentSlide) {
+            // Get the current slide element
+            let slide = slick.$slides[currentSlide];
+
+            // Get the voice ID of the current slide
+            let voiceId = slide.querySelector("#voiceid").textContent;
+
+            let numericVoiceId = null;
+            let match = extractNumber(voiceId);
+
+            function extractNumber(phrase) {
+              let match = phrase.match(/(\d+)(?=\D*$)/);
+              if (match) {
+                return match[0];
+              } else {
+                return null;
+              }
+            }
+
+            // Update the value of the search input element
+            searchInput.value = match;
+          }
+        );
+
+        // Add an event listener to handle play button clicks
+        document.addEventListener("click", function (event) {
+          // Check if the clicked element is a play button
+          if (event.target.matches(".playbtn button")) {
+            // Get the slide containing the clicked play button
+            let slide = event.target.closest(".slick-slide");
+
+            // Get the voice ID of the slide
+            let voiceId = slide.querySelector("#voiceid").textContent;
+
+            // Get the audio element for the voice ID
+            let audio = audioFiles[voiceId + ".wav"];
+
+            // Check if an audio element was found
+            if (audio) {
+              // Play the audio element
+              audio.play();
+            }
+          }
+        });
+
+        // Add an event listener to handle input events on textarea elements
+        document.addEventListener("input", function (event) {
+          // Check if the target element is a textarea
+          if (event.target.matches("textarea")) {
+            // Get the slide containing the textarea
+            let slide = event.target.closest(".slick-slide");
+
+            // Get the voice ID of the slide
+            let voiceId = slide.querySelector("#voiceid").textContent;
+
+            // Find the index of the row in the data array with a matching voice ID
+            let rowIndex = data.findIndex((row) => row[0] === voiceId);
+
+            // Check if a matching row was found
+            if (rowIndex !== -1) {
+              // Update the row in the data array with the new text
+              data[rowIndex][1] = event.target.value;
+            }
+          }
+        });
+
+        // Add an event listener to handle change events on checkbox elements
+        document.addEventListener("change", function (event) {
+          // Check if the target element is a checkbox
+          if (event.target.matches("input[type='checkbox']")) {
+            // Get the slide containing the checkbox
+            let slide = event.target.closest(".slick-slide");
+
+            // Get the voice ID of the slide
+            let voiceId = slide.querySelector("#voiceid").textContent;
+
+            // Find the index of the row in the data array with a matching voice ID
+            let rowIndex = data.findIndex((row) => row[0] === voiceId);
+
+            // Check if a matching row was found
+            if (rowIndex !== -1) {
+              // Update the row in the data array with the new validation status
+              data[rowIndex][data[rowIndex].length] = event.target.checked;
+            }
+          }
+        });
+
+        // Add an event listener to handle clicks on DEL buttons
+        document.addEventListener("click", function (event) {
+          // Check if the clicked element is a DEL button
+          if (event.target.matches("input[type='button'][value='DEL']")) {
+            // Get the slide containing the clicked DEL button
+            let slide = event.target.closest(".slick-slide");
+
+            // Get the voice ID of the slide
+            let voiceId = slide.querySelector("#voiceid").textContent;
+
+            // Find the index of the row in the data array with a matching voice ID
+            let rowIndex = data.findIndex((row) => row[0] === voiceId);
+
+            // Check if a matching row was found
+            if (rowIndex !== -1) {
+              // Remove the row from the data array
+              data.splice(rowIndex, 1);
+            }
+
+            // Regenerate the slides
+            regenerateSlides();
+          }
+        });
+
+        // Add an event listener to handle clicks on the download button
+        document
+          .getElementById("downloadButton")
+          .addEventListener("click", function () {
+            // Export the data array to a CSV file
+            exportToCsv(data);
+          });
+
+        // Create a function to regenerate the slides
+        function regenerateSlides() {
+          // Remove all existing slides from the slider
+          jQuery(".slider").slick("slickRemove", null, null, true);
+
+          // Reset the current batch
+          currentBatch = 0;
+
+          // Start processing the first batch of rows
+          processNextBatch();
+
+          // Manually trigger the afterChange event to update the value of the search input element
+          jQuery(".slider").slick("slickGoTo", 0, true);
+        }
+
+        // Create a function to export an array to a CSV file
+        function exportToCsv(data) {
+          // Convert the data array to CSV format using a pipe character as the delimiter
+          let csvContent =
+            "data:text/csv;charset=utf-8," +
+            data.map((e) => e.join("|")).join("\n");
+
+          // Create a link element for downloading the CSV file
+          let link = document.createElement("a");
+          link.setAttribute("href", encodeURI(csvContent));
+          link.setAttribute("download", "data.csv");
+
+          // Append the link to the document and simulate a click to start the download
+          document.body.appendChild(link);
+          link.click();
+        }
+
+        jQuery(".slider").slick({
+          centerMode: true,
+          dots: false,
+          autoplay: false,
+          centerPadding: "60px",
+          slidesToShow: 1,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: "40px",
+                Infinity: false,
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
